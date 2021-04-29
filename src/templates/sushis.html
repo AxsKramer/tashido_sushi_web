@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+  <h2 class="text-center">Clasicos</h2>
+
+  {% if sushis %}
+    {% for sushi in sushis %}
+      {% if sushi.5 == 1 %}
+        <div class="row py-3 mx-auto">
+          <div class="text-center col-lg-2 offset-lg-1 col-xs-12">
+            <img src="/static/imagenes/{{sushi.4}}.png" alt="">
+          </div>
+          <div class="text-center col-xs-12 col-lg-6">
+            <h4>{{sushi.1}}</h4>
+            <p>{{sushi.2}}</p>
+          </div>
+          <div class="text-center col-xs-12 col-lg-2 ">
+            <p style="font-size: 1.6rem; color: orangered">$ {{sushi.3}}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <h2 class="text-center py-3">Especiales</h2>
+  {% if sushis %}
+    {% for sushi in sushis %}
+      {% if sushi.5 == 0 %}
+        <div class="row py-3 mx-auto">
+          <div class="text-center col-lg-2 offset-lg-1 col-xs-12">
+            <img src="/static/imagenes/{{sushi.4}}.png" alt="">
+          </div>
+          <div class="text-center col-xs-12 col-lg-6">
+            <h4>{{sushi.1}}</h4>
+            <p>{{sushi.2}}</p>
+          </div>
+          <div class="text-center col-xs-12 col-lg-2 ">
+            <p style="font-size: 1.6rem; color: orangered">$ {{sushi.3}}</p>
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endblock %}

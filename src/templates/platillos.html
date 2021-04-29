@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+
+  <h2 class="text-center">Platillos</h2>
+  {% if platillos %}
+    {% for platillo in platillos %}
+      <div class="row py-3 mx-auto">
+        <div class="text-center col-lg-2 offset-lg-1 col-xs-12">
+          <img src="/static/imagenes/{{platillo.4}}.png" alt="">
+        </div>
+        <div class="text-center col-xs-12 col-lg-6">
+          <h4>{{platillo.1}}</h4>
+          <p>{{platillo.2}}</p>
+        </div>
+        <div class="text-center col-xs-12 col-lg-2">
+          <p style="font-size: 1.6rem; color: orangered">$ {{platillo.3}}</p>
+        </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+{% endblock %} 

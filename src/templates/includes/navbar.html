@@ -1,0 +1,41 @@
+  <nav class="navbar navbar-expand-lg navbar-dark .bg-transparent px-0 py-3">
+    <a class="navbar-brand" href="{{url_for('index')}} ">Tashido Sushi
+      <img src="http://pngimg.com/uploads/sushi/sushi_PNG98814.png" width="50" alt="">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto align-items-center">
+        <li class="nav-item {% if title == 'Sushis' %} active {% endif %}">
+          <a class="nav-link" href="{{url_for('sushis')}}"
+            >Sushis {% if title == 'Sushis' %} <span class="sr-only">(current)</span> {% endif %}</a
+          >
+        </li>
+        <li class="nav-item {% if title == 'Platillos' %} active {% endif %}">
+          <a class="nav-link" href="{{url_for('platillos')}}">Platillos
+            {% if title == 'Platillos' %} <span class="sr-only">(current)</span> {% endif %}
+          </a>
+        </li>
+        <li class="nav-item {% if title == 'Promociones' %} active {% endif %}">
+          <a class="nav-link" href="{{url_for('promociones')}}">Promociones
+            {% if title == 'Promociones' %} <span class="sr-only">(current)</span> {% endif %}
+          </a>
+        </li>
+        <li class="nav-item {% if title == 'Contacto' %} active {% endif %}">
+          <a class="nav-link" href="{{url_for('contacto')}}">Contacto
+            {% if title == 'Contacto' %} <span class="sr-only">(current)</span> {% endif %}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

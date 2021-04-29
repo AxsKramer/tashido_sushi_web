@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+  background: black;
+  color:white;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+header, .carousel, .carousel-inner{
+  max-height: 500px;
+}
+
+nav a{
+  font-size: 1.5rem;
+}
+
+.promocion__imagen{
+  position: relative;
+}
+
+.promocion__texto{
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  right: 5%;
+  z-index: 2;
+  color: white;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hover_icon:hover{
+  transform: scale(1.1);
+}
+
+.hover_icon:hover.fa-facebook{
+  color: blue;
+  background: white;
+}
+
+.hover_icon:hover.fa-instagram-square{
+  color: purple;
+  background: white;
+}
+
+.hover_icon:hover.fa-tiktok{
+  color: black;
+  background: white;
+}
+
+.overlay{
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 35%;
+}
+
+@media screen and (max-width: 450px) {
+  .overlay{
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0%;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 452px) and (max-width: 990px ) {
+  .overlay{
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0%;
+    right: 0;
+    left: 0;
+  }
+}

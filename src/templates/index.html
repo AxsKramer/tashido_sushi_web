@@ -1,0 +1,87 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+  <div class="row pb-5">
+    <div class="col-sm-12 col-md-6">
+      <h1 class="">
+        Tashido
+        <img
+        src="/static/imagenes/sushi.png"
+        width="80"
+        alt="logo"
+        />
+      </h1>
+      <p class="text-justify">
+        Disfruta el ambiente de nuestros elegantes y temáticos restaurantes
+      dentro de la ciudad.
+      </p>
+      <p class="text-justify">
+        Prueba nuestros sushis especiales y únicos.
+      </p>
+      <p class="text-justify">
+        Tenemos una gran variedad de sabores y colores.
+      </p>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <img
+      src="/static/imagenes/sushi2.jpg"
+      class="w-100"
+      height="250"
+      alt="sushi"
+      />
+    </div>
+  </div>
+  
+  <div class="row py-5">
+    <div class="col-sm-12 col-md-6 pt-3">
+      <h2>Tashido Quality</h2>
+      <p>Calidad en todos nuestros productos</p>
+      <p>Productos frescos y orgánicos.</p>
+      <p>Saludables y deliciosos.</p>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <img
+        src="static/imagenes/sushi3.jpg"
+        class="w-100"
+        height="250"
+        alt="sushi"
+      />
+    </div>
+  </div>
+
+  <h2 class="text-center">Promociones</h2>
+  <div class="row py-5">
+    <div class="col-sm-12 col-md-10 offset-md-1">
+      <img
+        class="w-100 promocion__imagen"
+        height="350"
+        src="static/imagenes/sushi4.jpg"
+        alt="sushi promo 1"
+      />
+      <div class="text-center promocion__texto">
+        <h3>Miércoles de Sushis Clásicos</h3>
+        <span>2 x 1</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row pb-5">
+    <div class="col-sm-12 col-md-10 offset-md-1">
+      <img
+        class="w-100 promocion__imagen"
+        height="350"
+        src="static/imagenes/sushi5.jpg"
+        alt="sushi promo 2"
+      />
+      <div class="text-center promocion__texto">
+        <h3>Lunes Especial</h3>
+        <span>Sushis especiales incluyen bebida (No alcohólica) + 10% de descuento.</span>
+      </div>
+    </div>
+  </div>
+  
+  {% include 'includes/delivery.html'%}
+
+  {% include 'includes/opinion_form.html'%}
+
+{% endblock %}
